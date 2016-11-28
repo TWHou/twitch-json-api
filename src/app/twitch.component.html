@@ -1,0 +1,11 @@
+<div class="thumbnail" [ngClass]="setClasses()">
+  <img [src]="stream.logo" alt="stream.name" width="100px">
+  <div class="caption">
+    <h3>
+      <a [href]="stream.url" *ngIf="stream.url !== ''">{{stream.name}}</a>
+      <span *ngIf="stream.url === ''">{{stream.name}}</span>
+    </h3>
+    <p>{{stream.game}}</p>
+    <p>{{stream.status}}</p>
+  </div>
+</div>

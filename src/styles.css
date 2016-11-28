@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #6441A4;
+}
+#wrapper {
+  padding-top: 15px;
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+#title {
+  padding: 0;
+  transform: translateY(10ch) rotate(-90deg);
+  transform-origin: 0 0;
+  position: fixed;
+  color: white;
+}
