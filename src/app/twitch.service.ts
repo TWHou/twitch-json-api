@@ -8,7 +8,7 @@ export class TwitchService {
   constructor(private _http: Http) { }
 
   getChannel(channel: string) {
-    return this._http.get(`https://wind-bow.hyperdev.space/twitch-api/streams/${channel}`)
+    return this._http.get(`https://wind-bow.gomix.me/twitch-api/streams/${channel}`)
       .map((response: Response) => response.json());
   }
 

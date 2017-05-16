@@ -7,7 +7,7 @@ import { TwitchService } from './twitch.service';
   styleUrls: ['./twitch.component.css']
 })
 export class TwitchComponent implements OnInit {
-  
+
   @Input() channel:string;
   stream = {
     name: "",
@@ -16,7 +16,7 @@ export class TwitchComponent implements OnInit {
     status: "",
     url: ""
   };
-  
+
   constructor(private _twitchService: TwitchService) { }
 
   ngOnInit() {
