@@ -5,11 +5,11 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TwitchService {
 
-  constructor(private _http: Http) { }
+    constructor(private _http: Http) { }
 
-  getChannel(channel: string) {
-    return this._http.get(`https://wind-bow.gomix.me/twitch-api/streams/${channel}`)
-      .map((response: Response) => response.json());
-  }
+    getChannel(channel: string) {
+        return this._http.get(`https://wind-bow.gomix.me/twitch-api/streams/${channel}`)
+            .map((response: Response) => response.json());
+    }
 
 }

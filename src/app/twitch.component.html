@@ -1,11 +1,11 @@
-<div class="thumbnail" [ngClass]="setClasses()">
-  <img [src]="stream.logo" alt="stream.name" width="100px">
+<div class="thumbnail" [ngClass]="channel.state">
+  <img [src]="channel.logo" alt="{{channel.name}}" width="100px">
   <div class="caption">
     <h3>
-      <a [href]="stream.url" *ngIf="stream.url !== ''">{{stream.name}}</a>
-      <span *ngIf="stream.url === ''">{{stream.name}}</span>
+      <a [href]="channel.url" *ngIf="channel.url !== ''">{{channel.name}}</a>
+      <span *ngIf="channel.url === ''">{{channel.name}}</span>
     </h3>
-    <p>{{stream.game}}</p>
-    <p>{{stream.status}}</p>
+    <p>{{channel.game}}</p>
+    <p>{{channel.status}}</p>
   </div>
 </div>
