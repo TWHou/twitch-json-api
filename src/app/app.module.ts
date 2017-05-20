@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TwitchComponent } from './twitch.component';
 import { TwitchService} from './twitch.service';
+import { FilterService } from './filter.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { TwitchService} from './twitch.service';
     FormsModule,
     HttpModule
   ],
-  providers: [TwitchService],
+  providers: [
+    TwitchService,
+    FilterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

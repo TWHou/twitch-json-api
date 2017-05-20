@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TwitchService } from './twitch.service';
+import { FilterService } from './filter.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,10 @@ import { TwitchService } from './twitch.service';
 export class AppComponent implements OnInit {
 
   channels = [];
+  filter: string = "";
+  filteredChannels = this.channels;
 
-  constructor(private _twitchService: TwitchService) { }
+  constructor(private _twitchService: TwitchService, private _filterService: FilterService) { }
 
   ngOnInit() {
     sampleChannels.forEach((ele) => {
@@ -56,6 +59,12 @@ export class AppComponent implements OnInit {
         });
     });
   }
+
+  setFilter(filter) {
+      this.filter = filter;
+      this.filteredChannels = this._filterService.search(this.channels, this.filter);
+  }
+
 }
 
 const sampleChannels: string[] = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
